@@ -94,6 +94,8 @@ def getjson():
             instructor = data["instructor"]
             sde_apprenticeship.append(
                 {"course": course, "duration": duration, "projects": projects, "labs": labs, "instructor": instructor})
+
+    # jsonify returns legal JSON
     return jsonify(sde_apprenticeship)
 
 
