@@ -1,0 +1,9 @@
+{% extends "home.html" %}
+
+{% block name %}
+{% if name %}
+<h3>Hello, {{ name }}!</h3>
+{% else %}
+<h3>Hello, Guest!</h3>
+{% endif %}
+{% endblock %}

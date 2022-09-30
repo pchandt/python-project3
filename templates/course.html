@@ -1,0 +1,9 @@
+{% extends "home.html" %}
+
+{% block content %}
+<ol>
+    {% for course in courses %}
+    <P>{{course}}</p>
+    {% endfor %}
+</ol>
+{% endblock %}

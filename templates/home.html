@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<style>
+body {
+  background-color: rgba(201, 76, 76, 0.3);
+  text-align: center;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+</style>
+<body>
+<h1>Welcome to our page!</h1>
+<h1>SDE Apprenticeship Course Content</h1>
+{% block name %}{% endblock %}
+<form action="{{ url_for('user') }}" method="POST">
+    <br><input type="text" name="nm"/><br>
+    <input type="submit" value="Enter your name"/><br></form>
+<p><a href=course>
+    <button>Available Course</button>
+</a>
+    <a href=date>
+        <button>Current date and time</button>
+    </a>
+    <a href=json>
+        <button>json data</button>
+    </a>
+</p>
+{% block content %}{% endblock %}
+</body>
+</html>
