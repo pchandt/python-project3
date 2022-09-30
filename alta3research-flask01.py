@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """ A script to demonstrate proficiency with the flask library """
+import json
 
+import requests
 from flask import Flask, jsonify  # python3 -m pip install flask
 from flask import render_template
 from flask import request  # python3 -m pip install requests
@@ -80,8 +82,20 @@ def getdate():
 
 
 # flask endpoint to display json data for the list sde_apprenticeship
-@app.route("/json")
+@app.route("/json", methods=["GET", "POST"])
 def getjson():
+    # if user generates a POST to our API
+    if request.method == "POST":
+        data = request.json
+        if data:
+            data = json.loads(data)
+            course = data["course"]
+            duration = data["duration"]
+            projects = data["projects"]
+            labs = data["labs"]
+            instructor = data["instructor"]
+            sde_apprenticeship.append(
+                {"course": course, "duration": duration, "projects": projects, "labs": labs, "instructor": instructor})
     return jsonify(sde_apprenticeship)
 
 
