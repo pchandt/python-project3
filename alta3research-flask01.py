@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """ A script to demonstrate proficiency with the flask library """
 import json
-
-import requests
 from flask import Flask, jsonify  # python3 -m pip install flask
 from flask import render_template
 from flask import request  # python3 -m pip install requests

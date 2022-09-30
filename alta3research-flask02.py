@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """ A script that demonstrate proficiency with the requests HTTP library"""
 import json
-
 import requests
 from pprint import pprint  # python3 -m pip install pprint
 import pandas as pd  # python3 -m pip install pandas
@@ -35,7 +34,7 @@ def main():
                 }
 
     # json.dumps takes a python object and returns it as a JSON string
-    new_data= json.dumps(new_data)
+    new_data = json.dumps(new_data)
     # requests.post requires URL to send request and json string to attach a request
     result = requests.post(URL, json=new_data)
     # pretty-print the response back from our POST request
